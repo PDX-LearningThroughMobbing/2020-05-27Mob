@@ -17,17 +17,19 @@ class NoteStoreTests : XCTestCase {
         noteStore = NoteStore(dir: "")
     }
     override func tearDown() {
-//        try! noteStore.fm.removeItem(atPath: noteStore.dir)
+        try! noteStore.fm.removeItem(atPath: noteStore.dir.relativePath)
     }
     func testSave() {
         let note = Note(text: "Dummy Text")
         XCTAssertNoThrow(try noteStore.save(note: note))
         let fm = noteStore.fm
-        XCTAssert(fm.fileExists(atPath: noteStore.dir))
+        XCTAssert(fm.fileExists(atPath: noteStore.dir.relativePath))
     }
 
     func testLoad() {
+        let original = Note(text: "original note")
+        try! noteStore.save(note: original)
         let note = try! noteStore.load()
-        XCTAssertEqual(note.text, "Dummy test")
+        XCTAssertEqual(note.text, original.text)
     }
 }

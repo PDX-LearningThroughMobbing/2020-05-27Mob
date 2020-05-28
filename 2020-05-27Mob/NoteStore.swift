@@ -13,12 +13,12 @@ struct Note: Codable {
 }
 
 class NoteStore {
-    let dir: String
+    let dir: URL
     let fm = FileManager.default
     
     init(dir: String) {
         
-        self.dir = fm.urls(for: .documentDirectory, in: .userDomainMask)[0].appendingPathComponent("note").absoluteString
+        self.dir = fm.urls(for: .documentDirectory, in: .userDomainMask)[0].appendingPathComponent("note")
         
         
     }
@@ -26,10 +26,13 @@ class NoteStore {
     func save(note: Note) throws {
         let encoder = JSONEncoder()
         let data = try encoder.encode(note)
-        try data.write(to: URL(string: dir)!)
+        try data.write(to: dir)
     }
 
     func load() throws -> Note {
+        let decoder = JSONDecoder()
+        
         return Note(text: "Dummy test")
+        
     }
 }
