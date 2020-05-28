@@ -28,4 +28,8 @@ class NoteStore {
         let data = try encoder.encode(note)
         try data.write(to: URL(string: dir)!)
     }
+
+    func load() throws -> Note {
+        return Note(text: "Dummy test")
+    }
 }

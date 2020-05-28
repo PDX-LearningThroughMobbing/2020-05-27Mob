@@ -10,19 +10,24 @@ import Foundation
 import XCTest
 @testable import _020_05_27Mob
 
-class NoteStoreTests : XCTest {
+class NoteStoreTests : XCTestCase {
     var noteStore: NoteStore!
 
     override func setUp() {
         noteStore = NoteStore(dir: "")
     }
     override func tearDown() {
-        try! noteStore.fm.removeItem(atPath: noteStore.dir)
+//        try! noteStore.fm.removeItem(atPath: noteStore.dir)
     }
     func testSave() {
         let note = Note(text: "Dummy Text")
         XCTAssertNoThrow(try noteStore.save(note: note))
         let fm = noteStore.fm
         XCTAssert(fm.fileExists(atPath: noteStore.dir))
+    }
+
+    func testLoad() {
+        let note = try! noteStore.load()
+        XCTAssertEqual(note.text, "Dummy test")
     }
 }
