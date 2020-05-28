@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		032F6161247F50FD00FFF478 /* NoteStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032F6160247F50FD00FFF478 /* NoteStore.swift */; };
+		032F6163247F512900FFF478 /* NoteStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032F6162247F512900FFF478 /* NoteStoreTests.swift */; };
 		2035AD72247F447A0017F9FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2035AD71247F447A0017F9FB /* AppDelegate.swift */; };
 		2035AD74247F447A0017F9FB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2035AD73247F447A0017F9FB /* SceneDelegate.swift */; };
 		2035AD76247F447A0017F9FB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2035AD75247F447A0017F9FB /* ViewController.swift */; };
@@ -14,8 +16,6 @@
 		2035AD7C247F447A0017F9FB /* _020_05_27Mob.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2035AD7A247F447A0017F9FB /* _020_05_27Mob.xcdatamodeld */; };
 		2035AD7E247F447C0017F9FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2035AD7D247F447C0017F9FB /* Assets.xcassets */; };
 		2035AD81247F447C0017F9FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2035AD7F247F447C0017F9FB /* LaunchScreen.storyboard */; };
-		2035AD8C247F447C0017F9FB /* _020_05_27MobTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2035AD8B247F447C0017F9FB /* _020_05_27MobTests.swift */; };
-		2035AD97247F447C0017F9FB /* _020_05_27MobUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2035AD96247F447C0017F9FB /* _020_05_27MobUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		032F6160247F50FD00FFF478 /* NoteStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteStore.swift; sourceTree = "<group>"; };
+		032F6162247F512900FFF478 /* NoteStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteStoreTests.swift; sourceTree = "<group>"; };
 		2035AD6E247F447A0017F9FB /* 2020-05-27Mob.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "2020-05-27Mob.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2035AD71247F447A0017F9FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2035AD73247F447A0017F9FB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -46,10 +48,8 @@
 		2035AD80247F447C0017F9FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2035AD82247F447C0017F9FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2035AD87247F447C0017F9FB /* 2020-05-27MobTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "2020-05-27MobTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2035AD8B247F447C0017F9FB /* _020_05_27MobTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _020_05_27MobTests.swift; sourceTree = "<group>"; };
 		2035AD8D247F447C0017F9FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2035AD92247F447C0017F9FB /* 2020-05-27MobUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "2020-05-27MobUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2035AD96247F447C0017F9FB /* _020_05_27MobUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _020_05_27MobUITests.swift; sourceTree = "<group>"; };
 		2035AD98247F447C0017F9FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -104,6 +104,7 @@
 				2035AD71247F447A0017F9FB /* AppDelegate.swift */,
 				2035AD73247F447A0017F9FB /* SceneDelegate.swift */,
 				2035AD75247F447A0017F9FB /* ViewController.swift */,
+				032F6160247F50FD00FFF478 /* NoteStore.swift */,
 				2035AD77247F447A0017F9FB /* Main.storyboard */,
 				2035AD7D247F447C0017F9FB /* Assets.xcassets */,
 				2035AD7F247F447C0017F9FB /* LaunchScreen.storyboard */,
@@ -116,7 +117,7 @@
 		2035AD8A247F447C0017F9FB /* 2020-05-27MobTests */ = {
 			isa = PBXGroup;
 			children = (
-				2035AD8B247F447C0017F9FB /* _020_05_27MobTests.swift */,
+				032F6162247F512900FFF478 /* NoteStoreTests.swift */,
 				2035AD8D247F447C0017F9FB /* Info.plist */,
 			);
 			path = "2020-05-27MobTests";
@@ -125,7 +126,6 @@
 		2035AD95247F447C0017F9FB /* 2020-05-27MobUITests */ = {
 			isa = PBXGroup;
 			children = (
-				2035AD96247F447C0017F9FB /* _020_05_27MobUITests.swift */,
 				2035AD98247F447C0017F9FB /* Info.plist */,
 			);
 			path = "2020-05-27MobUITests";
@@ -265,6 +265,7 @@
 				2035AD76247F447A0017F9FB /* ViewController.swift in Sources */,
 				2035AD7C247F447A0017F9FB /* _020_05_27Mob.xcdatamodeld in Sources */,
 				2035AD72247F447A0017F9FB /* AppDelegate.swift in Sources */,
+				032F6161247F50FD00FFF478 /* NoteStore.swift in Sources */,
 				2035AD74247F447A0017F9FB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,7 +274,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2035AD8C247F447C0017F9FB /* _020_05_27MobTests.swift in Sources */,
+				032F6163247F512900FFF478 /* NoteStoreTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,7 +282,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2035AD97247F447C0017F9FB /* _020_05_27MobUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,6 +441,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LF42FY64G6;
 				INFOPLIST_FILE = "2020-05-27Mob/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -459,6 +460,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LF42FY64G6;
 				INFOPLIST_FILE = "2020-05-27Mob/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -478,7 +480,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LF42FY64G6;
 				INFOPLIST_FILE = "2020-05-27MobTests/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -500,7 +502,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LF42FY64G6;
 				INFOPLIST_FILE = "2020-05-27MobTests/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
