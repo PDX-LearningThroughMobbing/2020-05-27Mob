@@ -8,6 +8,11 @@
 
 import UIKit
 
+//Single note editor that saves at an interval or that saves at the tap of a button
+//
+//Bonus: multiple file support + querying
+
+
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
