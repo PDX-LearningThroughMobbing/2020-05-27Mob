@@ -13,13 +13,17 @@ struct Note {
 }
 
 class NoteStore {
-    private let dir: URL
+    private let dir: String
+    let fm = FileManager.default
     
-    init(dir: URL) {
-        self.dir = dir
+    init(dir: String) {
+        
+        self.dir = fm.urls(for: .documentDirectory, in: .userDomainMask)[0].appendingPathComponent("note").absoluteString
+        
+        
     }
     
     func save(note: Note) {
-        
+        fm.isWritableFile(atPath: dir)
     }
 }

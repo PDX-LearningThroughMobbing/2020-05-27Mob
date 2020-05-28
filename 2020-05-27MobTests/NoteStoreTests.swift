@@ -14,7 +14,6 @@ class NoteStoreTests : XCTest {
     func testItWorks() {
         let fileManager = FileManager.default
         let path = fileManager.urls(for: .documentDirectory, in: .userDomainMask)[0]
-        
         let noteStore = NoteStore(dir: path)
         XCTAssert(true)
     }
