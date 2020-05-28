@@ -8,6 +8,18 @@
 
 import Foundation
 
+struct Note {
+    var text: String
+}
+
 class NoteStore {
+    private let dir: URL
     
+    init(dir: URL) {
+        self.dir = dir
+    }
+    
+    func save(note: Note) {
+        
+    }
 }
