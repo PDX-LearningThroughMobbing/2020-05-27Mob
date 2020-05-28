@@ -26,10 +26,10 @@ class NoteStoreTests : XCTestCase {
         XCTAssert(fm.fileExists(atPath: noteStore.dir.relativePath))
     }
 
-    func testLoad() {
+    func testLoad() throws {
         let original = Note(text: "original note")
         try! noteStore.save(note: original)
-        let note = try! noteStore.load()
+        let note = try noteStore.load()
         XCTAssertEqual(note.text, original.text)
     }
 }

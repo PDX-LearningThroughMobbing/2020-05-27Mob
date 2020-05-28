@@ -31,8 +31,7 @@ class NoteStore {
 
     func load() throws -> Note {
         let decoder = JSONDecoder()
-        
-        return Note(text: "Dummy test")
-        
+        let data = try Data(contentsOf: dir)
+        return try decoder.decode(Note.self, from: data)
     }
 }

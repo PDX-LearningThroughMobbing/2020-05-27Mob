@@ -14,15 +14,18 @@ import UIKit
 
 
 class ViewController: UIViewController {
+    var noteStore: NoteStore = NoteStore(dir: "")
 
     @IBOutlet var textView: UITextView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
+        guard let note = try? noteStore.load() else { return }
+        textView.text = note.text
     }
 
     @IBAction func save(sender: UIButton) {
-        print(textView.text)
+        try! noteStore.save(note: Note(text: textView.text))
     }
 }
