@@ -8,12 +8,12 @@
 
 import Foundation
 
-struct Note {
+struct Note: Codable {
     var text: String
 }
 
 class NoteStore {
-    private let dir: String
+    let dir: String
     let fm = FileManager.default
     
     init(dir: String) {
@@ -23,7 +23,9 @@ class NoteStore {
         
     }
     
-    func save(note: Note) {
-        fm.isWritableFile(atPath: dir)
+    func save(note: Note) throws {
+        let encoder = JSONEncoder()
+        let data = try encoder.encode(note)
+        try data.write(to: URL(string: dir)!)
     }
 }

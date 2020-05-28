@@ -11,10 +11,18 @@ import XCTest
 @testable import _020_05_27Mob
 
 class NoteStoreTests : XCTest {
-    func testItWorks() {
-        let fileManager = FileManager.default
-        let path = fileManager.urls(for: .documentDirectory, in: .userDomainMask)[0]
-        let noteStore = NoteStore(dir: path)
-        XCTAssert(true)
+    var noteStore: NoteStore!
+
+    override func setUp() {
+        noteStore = NoteStore(dir: "")
+    }
+    override func tearDown() {
+        try! noteStore.fm.removeItem(atPath: noteStore.dir)
+    }
+    func testSave() {
+        let note = Note(text: "Dummy Text")
+        XCTAssertNoThrow(try noteStore.save(note: note))
+        let fm = noteStore.fm
+        XCTAssert(fm.fileExists(atPath: noteStore.dir))
     }
 }
